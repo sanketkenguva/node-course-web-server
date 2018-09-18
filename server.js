@@ -63,6 +63,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/portfolio', (req, res) => {
+    //res.send('about');
+    res.render('portfolio.hbs', {
+        pageTitle: 'Portfolio Page',
+        currentYear: new Date().getFullYear()
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({        
         ErrorMessage: 'Unable to handle the request'
